@@ -4,7 +4,7 @@
 
 <br />
 <br />
-2.安装express
+2.安装express<br />
   &#x3000;npm install express -g<br />
   &#x3000;npm install express-generator -g<br />
   &#x3000;express -v//测试版本号
