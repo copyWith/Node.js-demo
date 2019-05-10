@@ -15,7 +15,9 @@
 
 <br />
 <br />
-4.npm install
+4.安装mySql
+  &#x3000;npm install
+  &#x3000;npm i mysql --save-dev
 <br />
 &#x3000;Ps: <br />
   &#x3000;&#x3000;npm install jquery@版本号<br />
