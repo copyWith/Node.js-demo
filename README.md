@@ -15,8 +15,8 @@
 
 <br />
 <br />
-4.安装mySql
-  &#x3000;npm install
+4.安装mySql: <br />
+  &#x3000;npm install: <br />
   &#x3000;npm i mysql --save-dev
 <br />
 &#x3000;Ps: <br />
