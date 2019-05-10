@@ -1,5 +1,5 @@
-1.安装node(https://nodejs.org/en/download/)
-  具体可参照:https://www.cnblogs.com/zhouyu2017/p/6485265.html
+1.安装node(https://nodejs.org/en/download/)<br />
+  具体可参照:https://www.cnblogs.com/zhouyu2017/p/6485265.html<br />
   node -v//测试版本号
 
 2.安装express
