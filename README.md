@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/ryh1994/photoGallery/master/about_me.png" alt="">
+<img src="https://github.com/copyWith/photoGallery/blob/master/about_me.jpg?raw=true" alt="">
 自己安装mySql服务与navicat：<br />
 &#x3000;&#x3000;https://pan.baidu.com/s/1NJ9gX9wO3CA0bVYMhbX0Aw<br />
 &#x3000;&#x3000;提取码：lzw2
