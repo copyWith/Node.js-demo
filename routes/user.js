@@ -5,9 +5,9 @@ var router = express.Router();
 var pool = mysql.createPool({
     host: '127.0.0.1',
     user: 'root',
-    password: '158647',   //mysql°²×°Ê±µÄÃÜÂë
-    database: 'demo',   //Êı¾İ¿âÃû³Æ
-    port: '3306'   //¶Ë¿ÚºÅ
+    password: '158647',   //mysqlå®‰è£…æ—¶çš„å¯†ç 
+    database: 'demo',   //æ•°æ®åº“åç§°
+    port: '3306'   //ç«¯å£å·
 });
 function getUserByName(callback) {
     pool.getConnection(function (err, connection) {
@@ -22,7 +22,7 @@ function getUserByName(callback) {
         })
     })
 }
-//²éÑ¯
+//æŸ¥è¯¢
 router.post("/user", function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     //console.log(req)
@@ -61,11 +61,11 @@ router.post("/user", function (req, res) {
     //    //}
     //});
 });
-//²åÈë
+//æ’å…¥
 router.post("/addUser",function(req, res){
     res.header("Access-Control-Allow-Origin", "*");
     pool.getConnection(function (err, connection) {
-        var sql = "insert into userList (userName) values ('ĞÂµÄ')";
+        var sql = "insert into userList (userName) values ('æ–°çš„')";
         connection.query(sql, function (err, result) {
             if (err) {
                 console.log("Err:" + err.message);
@@ -76,8 +76,17 @@ router.post("/addUser",function(req, res){
         });
     });
 });
-router.post('/GetBusinessList',function(req,res){
+// ç»Ÿä¸€è®¾ç½®è¯·æ±‚å¤´
+router.all("*",function(req,res,next){
     res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Content-Type,Content-Length, Authorization, Accept,X-Requested-With");
+    res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+    res.header("X-Powered-By",' 3.2.1');
+    if(req.method=="OPTIONS") res.send(200);/*è®©optionsè¯·æ±‚å¿«é€Ÿè¿”å›*/
+    else  next();
+});
+
+router.post('/GetBusinessList',function(req,res){
     pool.getConnection(function(err,connection){
         var sql="SELECT getbusinesslist.userPhone,getbusinesslist.userName FROM getbusinesslist";
         connection.query(sql,function(err,result){
@@ -88,7 +97,6 @@ router.post('/GetBusinessList',function(req,res){
     })
 });
 router.post('/UpBusiness',function(req,res){
-    res.header("Access-Control-Allow-Origin", "*");
     var name=req.body.name,phone=req.body.phone;
     pool.getConnection(function(err,connection){
         var sql="insert into GetBusinessList (userName,userPhone) values (?,?)";
@@ -99,7 +107,7 @@ router.post('/UpBusiness',function(req,res){
                 "ReponseId":null,
                 "ResponseCode":"1",
                 "ResponseDate":"2019-05-07 14:20:06",
-                "ResponseMessage":"Ö´ĞĞ³É¹¦",
+                "ResponseMessage":"æ‰§è¡ŒæˆåŠŸ",
                 "list":[]
             });
         })
