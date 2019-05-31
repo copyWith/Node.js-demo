@@ -41,9 +41,9 @@
 &#x3000;Ps: <br />
 
 ```
-  npm install jquery@版本号<br />
-  npm install jquery --save-dev<br />
-  npm update express 更新版本<br />
+  npm install jquery@版本号
+  npm install jquery --save-dev
+  npm update express 更新版本
   npm uninstall jquery 卸载
 ```
 
